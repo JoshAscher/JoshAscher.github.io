@@ -15,38 +15,32 @@
       {
         text-align: center;
         padding: 20px;
-      }   
+      }
+      
+    .column {
+      float: left;
+    }
+    
+    .left {
+      width: 75%;
+      }
+      
+    .right {
+      width: 25%;
+      }
     </style>
   </head>
 
   <body>
-    <div class="col">
-      float: left;
-    </div>
-    
-    <div class="col.left">
+    <div class="column left">
       <img src="leo-in-bike.jpg" width="400" height="300">
       <p>My dog, Leo, and I on a bike ride :)<p>
       <img src="integration-bee.jpeg" width="400" height="300">
       <p>Pitt Integration Bee 2022 :)<p>
     </div>
-    <style>
-      .col.left 
-      {
-        width: 75%;
-      }   
-    </style>
-    <div class="col.right">
+    <div class="column right">
       <h2> <a href="https://joshascher.github.io/projects" > Projects </h2>
       <h2> <a href="Grad School CV.pdf" > CV </h2>
-    </div>  
-    <style>
-      .col.right
-      {
-        width:  25%;
-      }
-    </style>
-
-    
-</body>
+    </div>
+  </body>
 </html>
