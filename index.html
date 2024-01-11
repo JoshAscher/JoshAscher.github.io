@@ -59,6 +59,18 @@
       <p>My dog, Leo, and I on a bike ride :)<p>
       <img src="integration-bee.jpeg" width="400" height="300">
       <p>Pitt Integration Bee 2022 :)<p>
+
+      <footer onload="updateTime()">
+  
+        <script>
+          function updateTime() {
+            document.getElementById("date").innerHTML = new Date(document.lastModified).toISOString().substr(11, 8);
+          }
+        </script>
+    
+        Last updated: <span id="date"></span>
+      </footer>
+        
     </div>
     <div class="column right">
       <h2> <a href="https://joshascher.github.io/projects" > Projects </h2>
@@ -67,15 +79,5 @@
     </div>
   </body>
 
-  <footer onload="updateTime()">
-    
-    <script>
-      function updateTime() {
-        document.getElementById("date").innerHTML = new Date(document.lastModified).toISOString().substr(11, 8);
-      }
-    </script>
-
-    Last updated: <span id="date"></span>
-  </footer>
-
+  
 </html>
