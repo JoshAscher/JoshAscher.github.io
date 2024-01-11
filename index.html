@@ -68,14 +68,14 @@
   </body>
 
   <footer onload="updateTime()">
-    Last updated: <span id="date"></span>
     
     <script>
       function updateTime() {
-        var date = document.lastModified;
-        document.getElementById("date").innerHTML = date;
+        document.getElementById("date").innerHTML = new Date(document.lastModified).toISOString().substr(11, 8);
       }
     </script>
+
+    Last updated: <span id="date"></span>
   </footer>
 
 </html>
