@@ -60,16 +60,13 @@
       <img src="integration-bee.jpeg" width="400" height="300">
       <p>Pitt Integration Bee 2022 :)<p>
 
-      <footer onload="updateTime()">
+      <footer>
   
+        <div id = "date"></div>
         <script>
-          function updateTime() {
-            document.getElementById("date").innerHTML = new Date(document.lastModified).toISOString().substr(11, 8);
-          }
+            var date = document.lastModified;
+            document.getElementById("date").innerHTML = "Last updated : " + date;
         </script>
-    
-        Last updated: <span id="date"></span>
-      </footer>
         
     </div>
     <div class="column right">
