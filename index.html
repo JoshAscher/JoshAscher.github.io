@@ -66,4 +66,16 @@
       <h2> <a href="https://joshascher.github.io/donut.html" > Donut (code from a1k0n.net) </h2>
     </div>
   </body>
+
+  <footer onload="updateTime()">
+    Last updated: <span id="date"></span>
+    
+    <script>
+      function updateTime() {
+        var date = document.lastModified;
+        document.getElementById("date").innerHTML = date;
+      }
+    </script>
+  </footer>
+
 </html>
