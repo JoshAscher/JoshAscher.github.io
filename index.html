@@ -65,9 +65,7 @@
         <div id = "date"></div>
         <script>
             var date = document.lastModified;
-            const options = { month: "long", year: "numeric" };
-            let formattedDate = new Intl.DateTimeFormat("en-US", options).format(date);
-            document.getElementById("date").innerHTML = "Last updated: " + formattedDate
+            document.getElementById("date").innerHTML = "Last updated: " + date.format("mmmm, yyyy")
             
         </script>
 
