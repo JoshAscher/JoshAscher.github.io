@@ -60,17 +60,18 @@
       <img src="integration-bee.jpeg" width="400" height="300">
       <p>Pitt Integration Bee 2022 :)<p>
 
-      <!--
       <footer>
   
         <div id = "date"></div>
         <script>
             var date = document.lastModified;
-            document.getElementById("date").innerHTML = "Last updated: " + date;
+            const options = { month: "long", year: "numeric" };
+            document.getElementById("date").innerHTML = "Last updated: " + 
+            new Intl.DateTimeFormat("en-US", options).format(date);
         </script>
 
       </footer> 
-      -->
+      
       
     </div>
     <div class="column right">
