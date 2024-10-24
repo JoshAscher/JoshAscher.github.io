@@ -1,0 +1,200 @@
+% !TEX program = xelatex
+
+\documentclass[]{resume-openfont}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+% Create project heading. Parameter: Name
+\newcommand{\projectHeadingNoLink}[1]{\ProjectNoLink{#1}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\mathCcourseWork}[1]{\textbf{Advanced Math Coursework:} #1}
+\newcommand{\csCourseWork}[1]{\textbf{Advanced CS Coursework:} #1}
+
+
+% Parameters: courses
+\newcommand{\teachingAssistant}[1]{\textbf{Teaching Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Josh Ascher}
+% How you want it to show up on the resume
+%\newcommand{\yourWebsite}{website.com}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+%\newcommand{\yourWebsiteLink}{https://website.com}
+\newcommand{\yourEmail}{ja3443@drexel.edu}
+\newcommand{\yourPhone}{267-431-0824}
+\newcommand{\githubUserName}{JoshAscher}
+\newcommand{\linkedInUserName}{Josh Ascher}
+\newcommand{\yourWebsite}{https://joshascher.github.io/}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+     \href{\yourWebsite}{\underline{\yourWebsite}}\\
+     (Updated \today)
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{PhD Computer Science}{Drexel University}{Philadelphia, PA}{}
+
+
+\educationHeading{BSc. Mathematics, Minor Computer Science}{University of Pittsburgh}{Pittsburgh, PA}{Apr 2023}
+
+%\mathCcourseWork{Partial Differential Equations; Abstract Algebra; Advanced Calculus I-II(courses taken as prep for the graduate analysis preliminary exam), Graduate Measure Theory}
+
+%\csCourseWork{Algorithm Design, Graduate Algorithms, Theory of Computation, Graduate Network Optimization(at CMU)}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Career Objective
+%--------------------------------------------------------------
+
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Undergraduate Projects}
+
+\projectHeading{Drawing Geodesics in the Heisenberg Group}{https://sites.pitt.edu/~armin/project/heisenbergman/}{C\#, Unity}
+This was an undergraduate research project with Dr. Armin Schikorra:
+
+For this project, I learned C\# and Unity to create a virtual reality game that allows users to understand the geometry of the Heisenberg Group. This geometry is not intuitive and very hard to visualize because it is not possible to travel in every direction. Whereas in the ``normal" 3 dimensional space, one can move in any direction, in the Heisenberg Group, one can only move in two directions, which change based on location. In creating this game, I implemented an algorithm to find shortest curves with respect to the Carnot-Carath\'eodori metric.  \par
+To create this game, I had to become very familiar with Unity and Oculus. I learned a lot about game design and how to integrate virtual reality into Unity. A more in depth page is linked above.
+\sectionsep
+  
+\projectHeading{Exploring Metrics in the Heisenberg Group}{https://digitalresearch.bsu.edu/mathexchange/volume-16/}{}
+This was an undergraduate research project with Dr. Armin Schikorra:
+
+We discuss the Heisenberg group $\mathbb{H}_1$, the three-dimensional space $\mathbb{R}^3$
+equipped with one of two equivalent metrics, the Kor\'anyi- and Carnot-Carath\'eodory metric. We show that the notion of length of curves for both metrics coincide, and that shortest curves, so-called geodesics, exist The paper is linked above. 
+\sectionsep
+
+\projectHeadingNoLink{Concrete Constructions of Depth Robust Graphs}{}
+
+This project was part of an REU at the University of Illinois, Urbana-Champaign under the direction of Dr. Ling Ren. While working on this project, I studied Directed Acyclic Graphs(DAGs) and worked to design a more efficient algorithm for generating depth-robust graphs. Additionally, I implemented well known attacks and used them to test the efficiency of the construction. 
+\sectionsep
+
+\projectHeading{Online Transportation with Resource Augmentation}{https://www.sciencedirect.com/science/article/pii/S1877050923009948}{}
+This was an undergraduate research project with Dr. Kirk Pruhs:
+
+We consider the online transportation problem set in a metric space containing parking garages of various capacities.
+Cars arrive over time, and must be assigned to an unfull parking garage upon their arrival. The objective is to minimize the aggregate distance that cars have to travel to their assigned parking garage. We show that the natural greedy
+algorithm, augmented with garages of $k \geq 3$ times the capacity, is $\left(1+\frac{2}{k-2}\right)$-competitive.
+
+\sectionsep
+
+\projectHeading{Online Monotonic Metric Matching}{https://arxiv.org/abs/2310.12394}{}
+This was an undergraduate research project with Dr. Kirk Pruhs:
+
+Motivated by demand-responsive parking pricing systems, we
+consider posted-price algorithms for the online metric matching problem. We give an $O(\log n)$-competitive posted-price randomized algorithm in the case that the metric space is a line. In particular, in this setting we show how to implement the ubiquitous  guess-and-double technique using prices.
+
+
+%--------------------------------------------------------------
+%     Publications and Conferences
+%--------------------------------------------------------------
+\section{Publications and Conferences}
+\begin{bullets}
+\item \textit{An $O(\log n)$-Competitive Posted-Price Algorithm for OML} - published in \textit{Conference on Combinatorial Optimization and Applications} (2023)
+\item \textit{Resource Augmentation Analysis of the Greedy Algorithm for the Online Transportation Problem} - published in  \textit{Latin American Algorithms, Graphs, and Optimization Symposium} (2023)
+\item \textit{Carnot-Carath\'eodory and Kor\'anyi-Geodesics in the Heisenberg Group} - published in Ball State University's \textit{Mathematics Exchange} (2022)
+\item ``Geodesics in the Heisenberg Group" at WVU 2022 Summer Undergraduate Research Symposia (2022)
+\item ``Heisenberg-Man" at Unviersity of Pittsburgh's MathFest (2022,2023)
+\end{bullets}
+  
+  
+%--------------------------------------------------------------
+%     Awards
+%--------------------------------------------------------------
+\section{Awards and Honors}
+\begin{bullets}
+\item University of Pittsburgh Integration Bee Winner(2022)
+\item Montgomery M. Culver Prize \textit{for outstanding academic performance in Mathematics} (2022,2023) 
+\item 3rd Place in University of Pittsburgh’s 2022 MathFest Poster Session
+\end{bullets}
+
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Teaching Experience}
+\resumeHeading{University of Pittsburgh}{Math Teaching Assistant and Tutor}{\\Pittsburgh, PA}{Aug 2021 – Apr 2023}
+\begin{bullets}
+    \item TA Sections
+    \begin{bullets}
+    \item Math 0031 - College Algebra
+    \item Math 0120 - Business Calculus
+    \item Math 0200 - Prep for Scientific Calculus(Pre-Calc)
+    \end{bullets}
+    \item Tutored Classes
+    \begin{bullets}
+        \item College Algebra and Precalculus
+        \item Calculus 1-3 and Business Calculus
+        \item Differential Equations
+        \item Introduction to Theoretical Math
+    \end{bullets}
+\end{bullets}
+\sectionsep
+
+
+\resumeHeading{University of Pittsburgh}{Computer Science Teaching Assistant}{\\Pittsburgh, PA}{Aug 2022 – Apr 2023}
+\begin{bullets}
+    \item TA Sections
+    \begin{bullets}
+    \item CS 0441 - Discrete Structures
+    \end{bullets}
+\end{bullets}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\iffalse
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{Java, Python, C\#}
+    \\
+    \singleItem{Technology:}Unity, \LaTeX
+\end{skillList}
+\fi
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
