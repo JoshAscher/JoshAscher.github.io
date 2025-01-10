@@ -62,18 +62,13 @@
 
       <footer>
   
-        <div id = "date"></div>
-        <script>
-            const date = new Date();
-            let options = {
-              year: "numeric",
-              month: "long",
-            };
-            const dateTimeFormatter = new Intl.DateTimeFormat("en-US", options);
-            const formatDate = dateTimeFormatter.format(date);
-            console.log(formatDate);
-            document.getElementById("date").innerHTML = "Last updated: " + formatDate;
-        </script>
+        <footer>
+          <div id="date"></div>
+          <script>
+            const lastModified = document.lastModified;
+            document.getElementById("date").innerHTML = "Last updated: " + lastModified;
+          </script>
+        </footer>
 
       </footer> 
       
